@@ -69,14 +69,6 @@ p {
   opacity: 0.6;
 }
 
-.hidden {
-  display: none;
-}
-
-.shown {
-  display: block;
-}
-
 /* Container */
 
 .container {
@@ -86,6 +78,7 @@ p {
     url(../assets/images/background.png);
   max-width: 800px;
   margin: auto;
+  position: relative;
 }
 
 /* Header */
@@ -125,13 +118,14 @@ nav li:hover {
   border-bottom: 3px solid #aa5848;
 }
 
-.hamburger {
+.hamburger-btn {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  cursor: pointer;
 }
 
-.hamburger span {
+.hamburger-btn span {
   width: 22px;
   height: 2.5px;
   border-radius: 12px;
@@ -140,6 +134,44 @@ nav li:hover {
 }
 
 /* overflow menu */
+.overflow-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 10px 20px;
+  width: 125px;
+  color: #8b8888;
+  border-radius: 10px;
+  border: 4px solid #aa5848;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  background-image: url(../assets/images/background.png);
+}
+
+.overflow-menu .close-btn {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 700;
+  color: #dad7d7;
+
+  cursor: pointer;
+}
+
+.overflow-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overflow-menu ul li {
+  border-bottom: 1px solid #8b8888;
+}
+
+.overflow-menu ul li:hover {
+  color: #aa5848;
+  border-bottom: 1px solid #aa5848;
+}
 
 /* Hero */
 .hero {
@@ -201,10 +233,14 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.intro-container .intro-banner {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
 .intro-container img {
   margin-top: 10px;
 }
-
 .intro-container p {
   text-align: justify;
   margin-top: 10px;
@@ -216,6 +252,7 @@ blockquote {
 
 blockquote.first-quote {
   border-bottom: 1px solid #8b8888;
+  padding-bottom: 20px;
 }
 
 blockquote img {
@@ -227,7 +264,6 @@ blockquote p {
   position: relative;
   top: 10px;
   margin-left: 40px;
-  margin-bottom: 20px;
 }
 
 /* Quick-info */
@@ -260,6 +296,9 @@ blockquote p {
 }
 
 /* Biography */
+.biography {
+  display: none;
+}
 .biography article {
   display: flex;
   gap: 15px;
@@ -282,7 +321,9 @@ blockquote p {
 }
 
 /* Ability */
-
+.ability {
+  display: none;
+}
 .grid-container {
   display: grid;
   gap: 10px;
@@ -365,7 +406,12 @@ footer {
     font-size: 25px;
   }
 
-  .hamburger {
+  .hamburger-btn {
+    display: none;
+  }
+
+  /* overflow menu */
+  .overflow-menu {
     display: none;
   }
 
@@ -388,6 +434,7 @@ footer {
     background-position: right;
     background-size: cover;
     gap: 20px;
+    background-position: 75% center;
   }
 
   h3 {

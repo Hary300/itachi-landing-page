@@ -9,14 +9,6 @@
   <body>
     <div class="container">
       <header>
-        <!-- overflow menu -->
-        <nav class="menu-container">
-          <ul>
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
-          </ul>
-        </nav>
         <h1>
           <span class="first-letter">I</span>TACHI
           <span class="first-letter">U</span>CHIHA
@@ -24,12 +16,13 @@
 
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Biography</li>
-            <li>Ability</li>
+            <li class="nav-home">Home</li>
+            <li class="nav-biography">Biography</li>
+            <li class="nav-ability">Ability</li>
           </ul>
         </nav>
-        <button class="hamburger">
+
+        <button class="hamburger-btn">
           <span></span>
           <span></span>
           <span></span>
@@ -65,6 +58,7 @@
               <img
                 src="./assets/images/Itachi-chalk.png"
                 alt="Itachi drawn on a board"
+                class="intro-banner"
               />
               <p>
                 For years, the world saw him as a cold-blooded villain who
@@ -98,6 +92,11 @@
                 </p>
               </blockquote>
             </div>
+            <img
+              src="./assets/images/Itachi-closeup.png"
+              alt="Itachi closeUp style image"
+              class="intro-banner"
+            />
           </section>
           <aside class="quick-info">
             <h3>Quick Info</h3>
@@ -294,6 +293,17 @@
           >Hary300</a
         >
       </footer>
+
+      <!-- overflow menu -->
+      <nav class="overflow-menu">
+        <button class="close-btn">X</button>
+        <ul>
+          <li class="nav-home">Home</li>
+          <li class="nav-biography">Biography</li>
+          <li class="nav-ability">Ability</li>
+        </ul>
+      </nav>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
