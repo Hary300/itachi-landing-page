@@ -58,10 +58,23 @@ img {
   object-fit: cover;
 }
 
+h3 {
+  font-size: 20px;
+  border-bottom: 1px solid #8b8888;
+}
+
 p {
   font-family: sans-serif;
   font-size: x-small;
   opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
 }
 
 /* Container */
@@ -100,7 +113,6 @@ nav {
 
 nav ul {
   display: flex;
-
   gap: 20px;
 }
 
@@ -126,6 +138,8 @@ nav li:hover {
   background-color: white;
   opacity: 0.8;
 }
+
+/* overflow menu */
 
 /* Hero */
 .hero {
@@ -165,13 +179,18 @@ main {
   background: url(../assets/images/background2.png);
   background-position: 83% center;
   background-size: cover;
-
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-container {
   display: flex;
   gap: 10px;
 }
 
-.text-main {
+.main-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -182,15 +201,11 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.text-main h3 {
-  font-size: 20px;
-}
-.text-main img {
+.intro-container img {
   margin-top: 10px;
-  object-fit: cover;
 }
 
-.text-main p {
+.intro-container p {
   text-align: justify;
   margin-top: 10px;
 }
@@ -199,8 +214,13 @@ blockquote {
   position: relative;
 }
 
+blockquote.first-quote {
+  border-bottom: 1px solid #8b8888;
+}
+
 blockquote img {
   position: absolute;
+  top: -15px;
 }
 
 blockquote p {
@@ -210,7 +230,7 @@ blockquote p {
   margin-bottom: 20px;
 }
 
-/* Quick info */
+/* Quick-info */
 .quick-info {
   flex: 35%;
   background-image: url('../assets/images/background.png');
@@ -227,7 +247,7 @@ blockquote p {
   color: rgba(255, 255, 255, 0.8);
   padding-bottom: 5px;
   margin-bottom: 8px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #8b8888;
 }
 
 .quick-info ul {
@@ -239,10 +259,93 @@ blockquote p {
   gap: 6px;
 }
 
+/* Biography */
+.biography article {
+  display: flex;
+  gap: 15px;
+}
+
+.biography article img {
+  width: 50%;
+  object-position: 55%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.biography article .text {
+  text-align: justify;
+}
+
+.biography article .text h4 {
+  border-bottom: 1px solid #8b8888;
+  margin-bottom: 5px;
+}
+
+/* Ability */
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.image-container {
+  height: 100px;
+}
+
+.card img.eye {
+  object-fit: contain;
+}
+
+.card img {
+  margin: auto;
+  height: 95%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 60%;
+}
+
+.ability-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ability-text h4 {
+  border-bottom: 1px solid #8b8888;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
+}
+
+@media (min-width: 375px) {
+  /* Ability */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    padding: 11px;
+  }
+}
+
+@media (min-width: 500px) {
+  /* Ability */
+  .card {
+    padding: 15px;
+  }
 }
 
 @media (min-width: 650px) {
@@ -287,7 +390,7 @@ footer {
     gap: 20px;
   }
 
-  .text-main h3 {
+  h3 {
     font-size: 25px;
   }
 
@@ -306,5 +409,10 @@ footer {
 
   .quick-info ul {
     font-size: 10px;
+  }
+
+  /* Ability */
+  .image-container {
+    height: 150px;
   }
 }
