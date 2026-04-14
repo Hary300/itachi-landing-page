@@ -311,6 +311,10 @@ blockquote p {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.biography article img.shift {
+  object-position: 33%;
+}
+
 .biography article .text {
   text-align: justify;
 }
