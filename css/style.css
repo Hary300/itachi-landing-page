@@ -3,22 +3,22 @@
 /* FONT */
 @font-face {
   font-family: 'Shojumaru';
-  src: url(../assets/font/Shojumaru-Regular.woff2) format('woff2');
+  src: url('../assets/font/Shojumaru-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url(../assets/font/Montserrat-Regular.woff2) format('woff2');
+  src: url('../assets/font/Montserrat-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Cinzel';
-  src: url(../assets/font/Cinzel-Regular.woff2) format('woff2');
+  src: url('../assets/font/Cinzel-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Playfair';
-  src: url(../assets/font/PlayfairDisplay-Regular.woff) format('woff');
+  src: url('../assets/font/PlayfairDisplay-Regular.woff') format('woff');
 }
 
 /* RESET */
@@ -75,7 +75,7 @@ p {
   background:
     linear-gradient(to bottom, rgba(0, 0, 0, 7) 0%, transparent 10%),
     linear-gradient(to top, rgba(0, 0, 0, 7) 0%, transparent 2%),
-    url(../assets/images/background.png);
+    url('../assets/images/background.webp');
   max-width: 800px;
   margin: auto;
   position: relative;
@@ -146,7 +146,7 @@ nav li:hover {
   border-radius: 10px;
   border: 4px solid #aa5848;
   box-shadow: 0 0 5px rgb(0, 0, 0);
-  background-image: url(../assets/images/background.png);
+  background-image: url('../assets/images/background.webp');
 }
 
 .overflow-menu .close-btn {
@@ -208,7 +208,7 @@ main {
   border-top: 5px solid #aa5848;
   border-bottom: 5px solid #aa5848;
   color: black;
-  background: url(../assets/images/background2.png);
+  background: url('../assets/images/background2.webp');
   background-position: 83% center;
   background-size: cover;
   padding: 20px;
@@ -269,7 +269,7 @@ blockquote p {
 /* Quick-info */
 .quick-info {
   flex: 35%;
-  background-image: url('../assets/images/background.png');
+  background-image: url('../assets/images/background.webp');
   font-family: serif;
   border-radius: 10px;
   padding: 10px;
