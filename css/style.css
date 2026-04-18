@@ -2,23 +2,8 @@
 
 /* FONT */
 @font-face {
-  font-family: 'Shojumaru';
-  src: url('../assets/font/Shojumaru-Regular.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'Montserrat';
   src: url('../assets/font/Montserrat-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Cinzel';
-  src: url('../assets/font/Cinzel-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Playfair';
-  src: url('../assets/font/PlayfairDisplay-Regular.woff') format('woff');
 }
 
 /* RESET */
@@ -372,6 +357,7 @@ blockquote p {
 
 /* Footer */
 footer {
+  font-family: 'Montserrat'; /* testing font */
   text-align: center;
   padding: 20px;
 }
